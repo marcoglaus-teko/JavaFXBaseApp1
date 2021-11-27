@@ -20,10 +20,23 @@ public class PrimaryController {
     @FXML
     void openBrowser(ActionEvent event) throws IOException {
         Runtime rt = Runtime.getRuntime();
-        String url = "https://youtube.com";
+        String[] urls = {"https://youtube.com", "https://google.ch", "https://coingecko.com"};
 
         String os = getEnvironment();
         System.out.println(os);
+
+        Button button = (Button) event.getSource();
+        System.out.println(button.getId());
+
+        String url = "https://google.ch";
+
+        if (button.getId().contains("1")) {
+            url = urls[0];
+        } else if (button.getId().contains("2")) {
+            url = urls[1];
+        } else if (button.getId().contains("3")) {
+            url = urls[2];
+        }
 
         if (os.contains("win")){
             rt.exec("rundll32 url.dll,FileProtocolHandler " + url);

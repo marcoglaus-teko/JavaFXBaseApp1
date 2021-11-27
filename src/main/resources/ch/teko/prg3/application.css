@@ -1,5 +1,5 @@
 .root {
-    -fx-background-color: blue;
+    -fx-background-color: rgba(0, 106, 255, 0.15);
 }
 
 .button {
@@ -8,4 +8,12 @@
 
 #b1 {
     -fx-background-image: url("youtube.jpg");
+}
+
+#b2 {
+    -fx-background-image: url("google.jpg");
+}
+
+#b3 {
+    -fx-background-image: url("coingecko.png");
 }
